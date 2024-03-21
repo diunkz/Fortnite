@@ -16,7 +16,8 @@ def fechar_processo(nome_processo):
             processo.terminate()
             print(f'Processo {nome_processo} encerrado com sucesso.')
             return True
-    print(f'Processo {nome_processo} não encontrado.')
+    print(f'Processo do Fortnite não encontrado. Não foi possível fechar.')
+
     return False
 
 # Função para pressionar uma tecla com uma duração específica
@@ -73,26 +74,13 @@ def main():
     # Loop para simular os pressionamentos até a tecla "P" ser pressionada ou o tempo acabar
     start_time = time.time()
     while True:
-        if keyboard.is_pressed('p'):  # Verifica se a tecla "P" foi pressionada
-            stop_event.set()  # Define o evento para parar a thread do temporizador
-            print("Simulação interrompida.")
-            break
-
         press_key(' ', 1)
-        keys_to_press = ['w', 'd', 's', 'a']
+        keys_to_press = ['w', 'd', 's', 'a', 'd', 'w', 'a', 's']
         for key in keys_to_press:
             press_key(key, 0.5)
             if keyboard.is_pressed('p'):  # Verifica se a tecla "P" foi pressionada
                 stop_event.set()  # Define o evento para parar a thread do temporizador
-                print("Simulação interrompida.")
-                return
-
-        keys_to_press_reverse = ['d', 'w', 'a', 's']
-        for key in keys_to_press_reverse:
-            press_key(key, 0.5)
-            if keyboard.is_pressed('p'):  # Verifica se a tecla "P" foi pressionada
-                stop_event.set()  # Define o evento para parar a thread do temporizador
-                print("Simulação interrompida.")
+                print("Simulação interrompida. Pressione enter para sair.")
                 return
 
         time_elapsed = time.time() - start_time
@@ -111,3 +99,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+    input('Pressione enter para sair.')
