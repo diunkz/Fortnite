@@ -34,7 +34,7 @@ def display_remaining_time(stop_event, t_seconds):
         minutes = remaining_seconds // 60
         seconds = remaining_seconds % 60
         os.system('cls' if os.name == 'nt' else 'clear')  # Limpa o terminal
-        print("Aperte repetidamente a tecla P para parar o programa.")
+        print("Aperte repetidamente a tecla 'P' para parar o programa.")
         print()
         print(f"\tFaltam {minutes} minutos e {seconds} segundos!")
         print()
@@ -59,10 +59,8 @@ def main():
 
     # Espera pela tecla "I" ser pressionada para começar 
     print("")
-    print("Abra a Janela do Fortnite (no fortnite festival)\ne pressione a tecla 'I' para começar...\n\nLembrando que você pode parar o programa a\nqualquer momento pressionando P repetidamente.")
+    print("Abra a Janela do Fortnite (no fortnite festival)\ne pressione a tecla 'I' para começar...\n\nLembrando que você pode parar o programa a qualquer\nmomento pressionando a tecla 'P' repetidamente.")
     keyboard.wait('i')
-
-    print("Iniciando simulação... Pressione 'P' para parar.")
 
     # Flag de evento para indicar que a simulação deve parar
     stop_event = Event()
