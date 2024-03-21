@@ -59,7 +59,7 @@ def main():
 
     # Espera pela tecla "I" ser pressionada para começar
     print("")
-    print("Abra a Janela do Fortnite (no fortnite festival)\ne pressione a tecla 'I' para começar...")
+    print("Abra a Janela do Fortnite (no fortnite festival)\ne pressione a tecla 'I' para começar...\n\nLembrando que você pode parar o programa a\nqualquer momento pressionando P repetidamente.")
     keyboard.wait('i')
 
     print("Iniciando simulação... Pressione 'P' para parar.")
