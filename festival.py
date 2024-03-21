@@ -57,7 +57,7 @@ def main():
     print()
     opcao = input("Escolha uma opção (1/2/3): ")
 
-    # Espera pela tecla "I" ser pressionada para começar
+    # Espera pela tecla "I" ser pressionada para começar 
     print("")
     print("Abra a Janela do Fortnite (no fortnite festival)\ne pressione a tecla 'I' para começar...\n\nLembrando que você pode parar o programa a\nqualquer momento pressionando P repetidamente.")
     keyboard.wait('i')
