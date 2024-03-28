@@ -13,7 +13,7 @@ Existem duas formas:
 
 Com o Prompt de comando aberto, digite o seguinte comando:
 ```python
-  python -m pip install pydirectinput psutil
+  python -m pip install pydirectinput psutil keyboard
 ```
 
 Com as bibliotecas instaladas, pode executar o script clicando duas vezes nele.
