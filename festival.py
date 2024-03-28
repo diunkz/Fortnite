@@ -72,10 +72,15 @@ def main():
     # Loop para simular os pressionamentos até a tecla "P" ser pressionada ou o tempo acabar
     start_time = time.time()
     while True:
-        press_key(' ', 1)
+        #press_key(' ', 1)
         keys_to_press = ['w', 'd', 's', 'a', 'd', 'w', 'a', 's']
         for key in keys_to_press:
-            press_key(key, 0.5)
+            press_key(key, 0.1)
+            press_key(key, 0.1)
+            pydirectinput.keyDown('b')
+            pydirectinput.click()
+            pydirectinput.keyUp('b')
+            
             if keyboard.is_pressed('p'):  # Verifica se a tecla "P" foi pressionada
                 stop_event.set()  # Define o evento para parar a thread do temporizador
                 print("Simulação interrompida. Pressione enter para sair.")
